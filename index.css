@@ -4,11 +4,12 @@
 
 html {
   height: 100vh;
-  background-color: #aaa;
+  width: 100%;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  background-color: #5a5d63;
 }
 
 .slider {
@@ -28,10 +29,16 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.slider_img img { 
+.slider_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 15px;
+}
+.slider_img p {
+  margin-top: 40px;
+  color: #e3e5e8;
+  width: fit-content;
 }
 
 .slider_img:target {
@@ -41,9 +48,8 @@ body {
 
 ul {
   position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: -65px;
+  left: 87%;
+  bottom: -70px;
   padding: 0;
 }
 
@@ -61,16 +67,16 @@ ul li a {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background: #ccc;
+  background: #254483;
+  transition: 0.3s;
 }
-
-ul li a:target {
-  background: #1e8cbe;
+ul li a:hover {
+  background: #e3e5e8;
 }
-
 #slide1:target ~ ul li a[href="#slide1"],
 #slide2:target ~ ul li a[href="#slide2"],
 #slide3:target ~ ul li a[href="#slide3"],
 #slide4:target ~ ul li a[href="#slide4"] {
-  background: #1e8cbe;
+  background: transparent;
+  border: #254483 2px solid;
 }
