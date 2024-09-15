@@ -51,6 +51,7 @@ ul {
   left: 87%;
   bottom: -70px;
   padding: 0;
+  z-index: 2;
 }
 
 ul li {
@@ -79,4 +80,77 @@ ul li a:hover {
 #slide4:target ~ ul li a[href="#slide4"] {
   background: transparent;
   border: #254483 2px solid;
+}
+@media screen and (max-width: 975px) {
+  .slider {
+    width: 700px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 84%;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .slider {
+    width: 500px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 77%;
+    bottom: 93px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slider {
+    width: 400px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 37%;
+    bottom: 161px;
+  }
+  .slider_img p {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .slider {
+    width: 350px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 35%;
+    bottom: 180px;
+  }
+  .slider_img p {
+    margin-top: 50px;
+  }
+  ul li a {
+    height: 12px;
+    width: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .slider {
+    width: 280px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 32%;
+    bottom: 218px;
+  }
+  .slider_img p {
+    margin-top: 45px;
+  }
 }
