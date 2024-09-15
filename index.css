@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #5a5d63;
+}
+
+.slider {
+  width: 900px;
+  height: 400px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.slider_img {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.slider_img p {
+  margin-top: 40px;
+  color: #e3e5e8;
+  width: fit-content;
+}
+
+.slider_img:target {
+  opacity: 1;
+  z-index: 1;
+}
+
+ul {
+  position: absolute;
+  left: 87%;
+  bottom: -70px;
+  padding: 0;
+  z-index: 2;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 0.3em;
+}
+
+ul li a {
+  margin: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #254483;
+  transition: 0.3s;
+}
+ul li a:hover {
+  background: #e3e5e8;
+}
+#slide1:target ~ ul li a[href="#slide1"],
+#slide2:target ~ ul li a[href="#slide2"],
+#slide3:target ~ ul li a[href="#slide3"],
+#slide4:target ~ ul li a[href="#slide4"] {
+  background: transparent;
+  border: #254483 2px solid;
+}
+@media screen and (max-width: 975px) {
+  .slider {
+    width: 700px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 84%;
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .slider {
+    width: 500px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 77%;
+    bottom: 93px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slider {
+    width: 400px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 37%;
+    bottom: 161px;
+  }
+  .slider_img p {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .slider {
+    width: 350px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 35%;
+    bottom: 180px;
+  }
+  .slider_img p {
+    margin-top: 50px;
+  }
+  ul li a {
+    height: 12px;
+    width: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .slider {
+    width: 280px;
+  }
+  .slider_img img {
+    height: auto;
+  }
+  ul {
+    left: 32%;
+    bottom: 218px;
+  }
+  .slider_img p {
+    margin-top: 45px;
+  }
+}
